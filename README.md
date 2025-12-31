@@ -1,37 +1,45 @@
-
-#  Projet Immobilier : Modélisation et Estimation des Prix
+#  Projet Immobilier : Estimation du prix des maisons
 
 ##  Présentation du Projet
-Ce projet a été conçu pour une agence immobilière souhaitant automatiser et fiabiliser l'estimation des prix de vente de ses biens. L'objectif est de prédire le prix d'une maison en s'appuyant sur ses caractéristiques intrinsèques comme la surface et la localisation.
+Ce projet a été réalisé pour répondre aux besoins d'une agence immobilière souhaitant automatiser l'estimation des prix de vente de ses biens. L'objectif principal est de construire un modèle de Machine Learning capable de prédire avec précision le prix d'une maison en fonction de ses caractéristiques (surface, quartier, etc.).
 
-##  Données et Méthodologie
-L'étude repose sur un historique de **10 000 ventes**. Le projet suit un workflow complet de Data Science :
-- **Analyse Exploratoire (EDA)** : Visualisation des tendances et corrélations.
-- **Prétraitement** : Nettoyage des données et préparation pour les algorithmes.
-- **Modélisation** : Comparaison de modèles de régression (Linéaire vs Random Forest).
+##  Les Données
+Le modèle s'appuie sur un historique de **10 000 ventes immobilières**. Chaque observation comprend des variables clés telles que :
+- La surface habitable.
+- La localisation (quartier).
+- Les caractéristiques intrinsèques du bien (nombre de chambres, salles de bain, etc.).
 
-##  Résultats du Modèle
-Le modèle **Random Forest** s'est révélé être le plus performant pour ce jeu de données :
-- **Erreur Absolue Moyenne (MAE)** : ~34 178 €.
-- **Précision** : Le modèle affiche une marge d'erreur moyenne de seulement **9,6 %**.
+##  Méthodologie
+Le projet suit une démarche rigoureuse de Data Science structurée en plusieurs étapes :
+1. **Chargement et Inspection** : Analyse de la structure et de la qualité des données.
+2. **Visualisation (EDA)** : Exploration graphique pour comprendre les corrélations.
+3. **Prétraitement** : Nettoyage et préparation des données pour les algorithmes.
+4. **Modélisation** : Entraînement de modèles de régression (Linéaire et Random Forest).
+5. **Évaluation** : Mesure de la performance via des métriques comme la MAE (Erreur Absolue Moyenne).
+
+##  Résultats et Performances
+Le modèle final utilisant l'algorithme **Random Forest** a montré d'excellents résultats :
+- **MAE (Erreur Absolue Moyenne)** : ~34 178 €.
+- **Précision** : Le modèle affiche une marge d'erreur moyenne de seulement **9,6 %** par rapport au prix réel.
 
 ---
 
-##  Comment utiliser ce projet ?
-Suivez ces étapes pour reproduire l'analyse ou tester le modèle sur votre propre machine.
+##  Guide d'Installation et d'Utilisation
+
+Suivez ces étapes pour configurer le projet et reproduire l'analyse sur votre machine.
 
 ### 1. Prérequis
-Vous devez avoir **Python 3.8+** installé sur votre système.
+Assurez-vous d'avoir installé **Python 3.8** ou une version supérieure.
 
-### 2. Installation et Configuration
-Commencez par cloner le dépôt et installez les bibliothèques nécessaires (Pandas, Scikit-Learn, etc.) :
+### 2. Configuration de l'environnement
+Clonez le dépôt sur votre ordinateur et installez les bibliothèques nécessaires :
 
 ```bash
 # Cloner le projet
 git clone [https://github.com/ZINABA-Albert/analyse-marche-immobilier.git](https://github.com/ZINABA-Albert/analyse-marche-immobilier.git)
 
-# Accéder au dossier
+# Entrer dans le dossier du projet
 cd analyse-marche-immobilier
 
-# Installer les dépendances
+# Installer les dépendances (pandas, scikit-learn, seaborn, etc.)
 pip install -r requirements.txt
